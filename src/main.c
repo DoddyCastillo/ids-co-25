@@ -50,6 +50,19 @@ typedef struct {
 /* === Private function implementation ========================================================= */
 
 /* === Public function implementation ========================================================== */
+
+/**
+ * @brief Implementación de escritura GPIO para un contexto específico.
+ *
+ * Esta función simula la escritura de un valor lógico en un pin GPIO determinado.
+ * Se espera que el contexto proporcionado contenga al menos el número de pin.
+ *
+ * @param state Valor lógico a escribir en el pin (0: LOW, 1: HIGH).
+ * @param ctx Puntero a una estructura de tipo gpio_ctx_t que contiene
+ *            información del pin (como su número).
+ *
+ * @note Esta implementación es simulada y solo imprime el resultado por consola.
+ */
 void gpio_write_impl(int state, void * ctx) {
     gpio_ctx_t * gpio = (gpio_ctx_t *)ctx;
     printf("GPIO%d <- %d\n", gpio->pin, state);
